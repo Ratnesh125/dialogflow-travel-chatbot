@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialogflow Travel Chatbot</title>
+</head>
+
+<body>
+
     <h1>Dialogflow Travel Chatbot</h1>
 
     <p>This repository contains the code for a Travel Chatbot implemented with Dialogflow, Node.js server, and OpenAI
@@ -65,3 +76,7 @@
         encounter any issues or have questions, feel free to reach out to me.</p>
 
     <p>Thank you for using our Travel Chatbot solution. Happy coding!</p>
+
+</body>
+
+</html>
