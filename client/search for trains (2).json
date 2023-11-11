@@ -1,0 +1,708 @@
+{
+  "id": "79aa84b7-0f81-4ebc-a7ef-e36bc1f0db29",
+  "name": "search for trains",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [],
+  "contexts": [],
+  "endInteraction": true,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "input.findtrains",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "date",
+          "dataType": "@sys.date",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "what date"
+          ],
+          "value": "$date",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "geo-city-1",
+          "dataType": "@sys.geo-city",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "Departure city, please.",
+            "Where are you departing from?",
+            "Where are you starting your journey from?",
+            "Please specify your departure city.",
+            "From which city are you leaving?",
+            "Your point of departure is?",
+            "Specify your departure city, please.",
+            "Which city are you setting off from?",
+            "Starting city for your trip?",
+            "Your starting point is?",
+            "From where are you beginning your journey?",
+            "What's your departure city?",
+            "Starting city?",
+            "Let me know the city you're leaving from.",
+            "The city you're departing from is?",
+            "Departure location?",
+            "Kindly mention your departure city.",
+            "City of departure?",
+            "Commencing city, please.",
+            "Tell me your starting city."
+          ],
+          "value": "$geo-city-1",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "geo-city-2",
+          "dataType": "@sys.geo-city",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "Destination city, please.",
+            "Please specify your destination city.",
+            "Where are you ending your journey?",
+            "Specify your destination city, please.",
+            "Let me know the city you're going to.",
+            "To which city are you traveling?",
+            "Tell me your end city.",
+            "City of arrival?",
+            "End city?",
+            "Your end point is?",
+            "Destination city for your trip?",
+            "Which city are you heading to?",
+            "Your point of arrival is?",
+            "To where are you traveling?",
+            "Kindly mention your destination city.",
+            "Destination location?",
+            "The city you're arriving at is?",
+            "Arriving city, please.",
+            "What's your destination city?",
+            "Where is your final destination?"
+          ],
+          "value": "$geo-city-2",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Try again later.",
+            "Something went wrong.",
+            "Internal server error.",
+            "Please retry.",
+            "Technical glitch.",
+            "Oops, an issue.",
+            "Server hiccup.",
+            "Error occurred.",
+            "Retry your query.",
+            "System hiccup.",
+            "Reload the page.",
+            "Data fetch issue.",
+            "Give it another shot.",
+            "Temporary problem.",
+            "Service disrupted.",
+            "Refresh and retry.",
+            "Check your input.",
+            "Query failed.",
+            "Problem fetching data.",
+            "Connection error."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "What's the price of a ticket ",
+          "userDefined": false
+        },
+        {
+          "text": "from [departure city]",
+          "userDefined": true,
+          "alias": "geo-city-1",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "to [destination city]",
+          "userDefined": true,
+          "alias": "geo-city-2",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " by train?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "cc8a119f-53ef-4ad3-aeb5-845bc0c8990c",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Train options for a trip ",
+          "userDefined": false
+        },
+        {
+          "text": "from [departure city]",
+          "userDefined": true,
+          "alias": "geo-city-1",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "to [destination city]",
+          "userDefined": true,
+          "alias": "geo-city-2",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": ".",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "83366aba-5600-4c01-8af8-f695ae514764",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Get information about train stations in ",
+          "userDefined": false
+        },
+        {
+          "text": "[departure city]",
+          "userDefined": true,
+          "alias": "geo-city-1",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": ".",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "b366fcf5-718a-442c-87ec-3e83bd0d6be0",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Find me the fastest train ",
+          "userDefined": false
+        },
+        {
+          "text": "to [destination city]",
+          "userDefined": true,
+          "alias": "geo-city-2",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": ".",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "45841814-6368-46a8-b262-a8d0c88ddac5",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "List of trains ",
+          "userDefined": false
+        },
+        {
+          "text": "to [destination city]",
+          "userDefined": true,
+          "alias": "geo-city-2",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "from [departure city]",
+          "userDefined": true,
+          "alias": "geo-city-1",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": ".",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "2c822da3-27e8-4715-ae76-48f77c61196b",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "How can I ",
+          "userDefined": false
+        },
+        {
+          "text": "reach [destination city]",
+          "userDefined": true,
+          "alias": "geo-city-2",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " by train?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "7a9e8bfa-603b-44b2-ba1a-50b0a7ae67ee",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Tell me the train schedule ",
+          "userDefined": false
+        },
+        {
+          "text": "for [departure city]",
+          "userDefined": true,
+          "alias": "geo-city-2",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": ".",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "8f451b42-33e5-4b6b-9c32-1a938ca188b3",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "What's the next train ",
+          "userDefined": false
+        },
+        {
+          "text": "to [destination city]",
+          "userDefined": true,
+          "alias": "geo-city-2",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "3bce961a-9e48-450e-8583-cf247ac5c997",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Show me trains ",
+          "userDefined": false
+        },
+        {
+          "text": "from [departure city]",
+          "userDefined": true,
+          "alias": "geo-city-1",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "to [destination city]",
+          "userDefined": true,
+          "alias": "geo-city-2",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": ".",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "fc056219-fd51-4091-b886-421663a7623e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Search for available train routes.",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "ca6cef25-6259-49c9-825b-380275369604",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "train ",
+          "userDefined": false
+        },
+        {
+          "text": "from [departure city]",
+          "userDefined": true,
+          "alias": "geo-city-1",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "to [destination city]",
+          "userDefined": true,
+          "alias": "geo-city-2",
+          "meta": "@sys.geo-city"
+        }
+      ],
+      "count": 0,
+      "id": "d20893c5-770f-4b8b-858f-0a72007320f3",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Train information ",
+          "userDefined": false
+        },
+        {
+          "text": "for city",
+          "userDefined": true,
+          "alias": "geo-city-1",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "to city",
+          "userDefined": true,
+          "alias": "geo-city-2",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": ".",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "468a650e-c5c6-4bcb-b825-cf89aab0ec62",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Get me details on the next train ",
+          "userDefined": false
+        },
+        {
+          "text": "to [destination city]",
+          "userDefined": true,
+          "alias": "geo-city-2",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": ".",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "5a47a1d9-7778-4ac8-b63c-27f7f8cc688c",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": " Find a train that ",
+          "userDefined": false
+        },
+        {
+          "text": "goes",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "through [transit city]",
+          "userDefined": true,
+          "alias": "geo-city-1",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "to [final destination]",
+          "userDefined": true,
+          "alias": "geo-city-2",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": ".",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "48b6dbcd-58b3-48c5-be2e-eeb6f059757f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Tell me about train services ",
+          "userDefined": false
+        },
+        {
+          "text": "from [departure city]",
+          "userDefined": true,
+          "alias": "geo-city-1",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": ".",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "5c63dde9-dd96-40b9-9509-c612052dc343",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Train options ",
+          "userDefined": false
+        },
+        {
+          "text": "from dewas",
+          "userDefined": true,
+          "alias": "geo-city-1",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "to indore",
+          "userDefined": true,
+          "alias": "geo-city-2",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": ".",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "b8343d38-b6b6-4a51-b310-96c9ae7bcde8",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Get me information on trains ",
+          "userDefined": false
+        },
+        {
+          "text": "to [destination city]",
+          "userDefined": true,
+          "alias": "geo-city-2",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": ".",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "811c2e41-fd0a-4adb-8135-19022f67a65a",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "What trains are available ",
+          "userDefined": false
+        },
+        {
+          "text": "to [destination city]",
+          "userDefined": true,
+          "alias": "geo-city-2",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "today",
+          "userDefined": false,
+          "alias": "date",
+          "meta": "@sys.date"
+        },
+        {
+          "text": "?",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "9cd5f69a-cea4-434f-bd25-f43dd67547c5",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Search for trains departing ",
+          "userDefined": false
+        },
+        {
+          "text": "from [departure city]",
+          "userDefined": true,
+          "alias": "geo-city-1",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": ".",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d0691f4b-8558-402d-aaa8-92f136a347e4",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Find a train ",
+          "userDefined": false
+        },
+        {
+          "text": "from [departure city]",
+          "userDefined": true,
+          "alias": "geo-city-1",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "to [destination city]",
+          "userDefined": true,
+          "alias": "geo-city-2",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": ".",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "11b72a3d-e9db-456d-ad2b-c7d50e947d98",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "train from ",
+          "userDefined": false
+        },
+        {
+          "text": "dewas",
+          "userDefined": false,
+          "alias": "geo-city-1",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " to ",
+          "userDefined": false
+        },
+        {
+          "text": "indore",
+          "userDefined": false,
+          "alias": "geo-city-2",
+          "meta": "@sys.geo-city"
+        }
+      ],
+      "count": 0,
+      "id": "6755644d-7e19-4593-98ba-6368423a864d",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": true
+}

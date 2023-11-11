@@ -1,0 +1,98 @@
+{
+  "id": "f4c77ff9-6072-4874-be9b-5f46e1750851",
+  "name": "getEmail",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "awakeGetEmail"
+  ],
+  "contexts": [
+    "awakeGetEmail"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "awakeGetPhoneNo",
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "email",
+          "dataType": "@sys.email",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "your email?"
+          ],
+          "value": "$email",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "hi $email ,your phone no?"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "my email is ",
+          "userDefined": false
+        },
+        {
+          "text": "ratnesh@gmail.com",
+          "userDefined": true,
+          "alias": "email",
+          "meta": "@sys.email"
+        }
+      ],
+      "count": 0,
+      "id": "13f39038-fd30-483f-b33f-215ed8425800",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "ratnesh@gmail.com",
+          "userDefined": true,
+          "alias": "email",
+          "meta": "@sys.email"
+        }
+      ],
+      "count": 0,
+      "id": "95279094-59dd-4251-8267-b19bb59fb427",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

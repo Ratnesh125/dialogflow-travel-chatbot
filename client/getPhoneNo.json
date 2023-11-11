@@ -1,0 +1,75 @@
+{
+  "id": "3e37d924-9878-44d4-b5f1-bba70ecfea20",
+  "name": "getPhoneNo",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [],
+  "contexts": [],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "phone-number",
+          "dataType": "@sys.phone-number",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "your phone No?"
+          ],
+          "value": "$phone-number",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "hi $phone-number ,response sent, soon get back to you"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "my phone number is ",
+          "userDefined": false
+        },
+        {
+          "text": "9999999999",
+          "userDefined": true,
+          "alias": "phone-number",
+          "meta": "@sys.phone-number"
+        }
+      ],
+      "count": 0,
+      "id": "e6da6c8c-a049-4f52-9a69-da90eaff4820",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": true
+}

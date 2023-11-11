@@ -1,0 +1,50 @@
+{
+  "id": "602e49d8-7ae0-4ef7-9a1b-a79d50bbc486",
+  "name": "random",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [],
+  "contexts": [],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "output.gpt",
+      "affectedContexts": [
+        {
+          "name": "awakeStoredResponse",
+          "lifespan": 1
+        }
+      ],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "click here to get response",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "12e2fed4-b362-4ff0-bc3c-d90479fc7d9d",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": true
+}

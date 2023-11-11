@@ -1,0 +1,57 @@
+{
+  "id": "4a515ff8-4829-485e-870c-1bc76675660f",
+  "name": "webhookTest",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [],
+  "contexts": [],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "look at me",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "4caf4cfa-291c-4952-84e4-3b2c5b7f0647",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "web hook Test",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "f747d25e-0da0-421c-8aa2-93872513b845",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": true,
+  "webhookUsed": true
+}

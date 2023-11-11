@@ -1,0 +1,102 @@
+{
+  "id": "1daa34c7-4a7e-4429-8156-61d3daf48f5e",
+  "name": "getName",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "awakeGetName"
+  ],
+  "contexts": [
+    "awakeGetName"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "awakeGetEmail",
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "given-name",
+          "dataType": "@sys.given-name",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "your name?"
+          ],
+          "value": "$given-name",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "hi $given-name, your email?"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "i'm ",
+          "userDefined": false
+        },
+        {
+          "text": "ratnesh",
+          "userDefined": false,
+          "alias": "given-name",
+          "meta": "@sys.given-name"
+        }
+      ],
+      "count": 0,
+      "id": "1998ada2-6e36-4109-bea1-09268a3e0a86",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "my name is ",
+          "userDefined": false
+        },
+        {
+          "text": "ratnesh",
+          "userDefined": true,
+          "alias": "given-name",
+          "meta": "@sys.given-name"
+        }
+      ],
+      "count": 0,
+      "id": "10f7a115-efa2-496b-a49d-770405bef1b4",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
