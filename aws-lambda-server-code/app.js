@@ -17,13 +17,13 @@ export const handler = async (event) => {
     if (action === 'input.unknown') {
         const openairesponse = await gptResponse(event.queryResult);
         return {
-            fulfillmentText: JSON.stringify(openairesponse)
+            fulfillmentText: openairesponse
         };
     }
     else if (action === 'input.findtrains') {
         const trainData = await findtrains(event.queryResult);
         return {
-            fulfillmentText: JSON.stringify(trainData)
+            fulfillmentText: trainData.join('\n')
         };
     }
     else {
@@ -44,7 +44,7 @@ async function gptResponse(data) {
         messages: [
             { role: 'user', content: data.queryText },
         ],
-        model: 'gpt-3.5-turbo',
+        model: 'gpt-3.5-turbo-1106',
         max_tokens: 100,
     });
     return chatCompletion.choices[0].message.content;
@@ -68,7 +68,6 @@ async function findtrains(data) {
     const stationCode = await readData(source, destination);
     const source_code = stationCode[0];
     const destination_code = stationCode[1];
-    console.log(source_code, destination_code, "hii");
     const trainData = await getTrainData(source_code, destination_code, date);
     const list = [];
     for (var i in trainData) {
