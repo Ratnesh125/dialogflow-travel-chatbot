@@ -3,6 +3,9 @@
 <p>This repository contains the code for a Travel Chatbot implemented with Dialogflow, Node.js server, and OpenAI
     integration. The server code is in the 'server' folder, and the Dialogflow intent files are in the 'client'
     folder.</p>
+<h2>Live demo </h2>
+<p>Try it out</p>
+<link>https://t.me/travelAroundAndFindOutBot</link>
 
 <h2>Prerequisites</h2>
 <ul>
