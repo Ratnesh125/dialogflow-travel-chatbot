@@ -7,6 +7,10 @@
 <p>Try it out</p>
 <link>https://t.me/travelAroundAndFindOutBot</link>
 
+![Screenshot (327)](https://github.com/Ratnesh125/dialogflow-travel-chatbot/assets/87529730/e546a0e0-b5b0-43f5-80fe-da648e6e6551)
+![Screenshot (328)](https://github.com/Ratnesh125/dialogflow-travel-chatbot/assets/87529730/86d647f5-137c-48a6-8052-609ac76aa791)
+
+
 <h2>Prerequisites</h2>
 <ul>
     <li><a href="https://nodejs.org/">Node.js</a> installed</li>
